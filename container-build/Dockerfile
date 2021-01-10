@@ -11,4 +11,4 @@ RUN chgrp -R 0 /var/log/httpd /var/run/httpd && \
 
 EXPOSE 8080
 
-RUN 1001
+USER 1001
