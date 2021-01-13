@@ -147,7 +147,6 @@ pipeline {
 				return (it.object().status.phase == "Running")
 				}
 			}
-		     }
                         echo "Deployment to Staging env is complete. Access the app at the URL http://${routeHost}."
                     }
                 }
