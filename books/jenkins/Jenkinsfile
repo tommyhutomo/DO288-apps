@@ -63,7 +63,7 @@ pipeline {
         	sh '''
 			oc project ${DEV_PROJECT}
  			oc new-app --as-deployment-config --name ${APP_NAME} -i nodejs:12 ${APP_GIT_URL} \
-			--context-dir ${APP_NAME}--build-env npm_config_registry=${NEXUS_SERVER}
+			--context-dir ${APP_NAME} --build-env npm_config_registry=${NEXUS_SERVER}
 			oc expose svc/${APP_NAME}
 		   '''
             }
